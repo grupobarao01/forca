@@ -24,7 +24,6 @@ function adivinharLetra(letra) {
     if (letrasErradas.includes(letra) || palavraExibida.includes(letra)) {
         return;
     }
-
     let correta = false;
     for (let i = 0; i < palavra.length; i++) {
         if (palavra[i] === letra) {
@@ -32,7 +31,6 @@ function adivinharLetra(letra) {
             correta = true;
         }
     }
-
     if (!correta) {
         letrasErradas.push(letra);
         tentativas++;
@@ -54,32 +52,3 @@ function adivinharLetra(letra) {
         document.getElementById('botao-reiniciar').style.display = 'inline-block';
     }
 }
-
-// Função para desenhar o boneco da forca progressivamente
-function desenharForca(tentativas) {
-    const partes = ['cabeca', 'corpo', 'braco-esquerdo', 'braco-direito', 'perna-esquerda', 'perna-direita'];
-    if (tentativas <= partes.length) {
-        document.querySelector(`.${partes[tentativas - 1]}`).classList.remove('oculto');
-    }
-}
-
-// Função para resetar o boneco da forca
-function resetarForca() {
-    const partes = document.querySelectorAll('.parte');
-    partes.forEach(parte => parte.classList.add('oculto'));
-}
-
-// Evento do botão de palpite
-document.getElementById('botao-palpite').addEventListener('click', () => {
-    const letra = document.getElementById('entrada-letra').value.toLowerCase();
-    document.getElementById('entrada-letra').value = '';
-    if (letra && /^[a-z]$/.test(letra)) {
-        adivinharLetra(letra);
-    }
-});
-
-// Reiniciar o jogo
-document.getElementById('botao-reiniciar').addEventListener('click', escolherPalavra);
-
-// Iniciar o jogo na primeira vez
-escolherPalavra();

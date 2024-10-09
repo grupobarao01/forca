@@ -16,6 +16,7 @@
     position: absolute;
     background-color: #333;
 }
+
 .cabeca {
     top: 20px;
     left: 50%;
@@ -31,6 +32,8 @@
     width: 10px;
     height: 50px;
 }
+
+
 .braco-esquerdo {
     top: 70px;
     left: calc(50% - 25px);
@@ -45,6 +48,9 @@
     height: 10px;
     transform: rotate(-45deg);
 }
+
+
+
 .perna-esquerda {
     top: 125px;
     left: calc(50% - 5px);
