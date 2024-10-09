@@ -34,7 +34,7 @@ function adivinharLetra(letra) {
     if (!correta) {
         letrasErradas.push(letra);
         tentativas++;
-        document.getElementById('letras-erradas').textContent = `Letras erradas: ${letrasErradas.join(', ')}`;
+        document.getElementById('letras-erradas').textContent = `Letras erradas: ${letrasErradas.join(',')}`;
         desenharForca(tentativas);
     }
 
