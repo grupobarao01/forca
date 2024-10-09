@@ -53,7 +53,7 @@
     height: 10px;
     transform: rotate(45deg);
 }
-.perna-esquerdo {
+.perna-direita {
      top: 125px;
      right: calc(50% - 5px);
      width: 30px;
