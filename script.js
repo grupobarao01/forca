@@ -1,4 +1,4 @@
-let palavras = ['javascript', 'bootstrap', 'frontend', 'backend', 'programacao', 'desenvolvedor', 'web'];
+let palavras = ['javascript', 'bootstrap', 'frontend', 'backend', 'programacao', 'desenvolvedor', 'web', 'ornitorrinco'];
 let palavra = '';
 let palavraExibida = [];
 let letrasErradas = [];
